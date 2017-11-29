@@ -43,7 +43,7 @@ define( [ 'angular',
             
             $scope.logout = function ($event) {
                 $rootScope.$broadcast('user.logout', $event);
-            }
+            };
                         
 
         };

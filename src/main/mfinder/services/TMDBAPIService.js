@@ -23,7 +23,7 @@ define( [ 'angular',
     function ( angular ) {
         "use strict";
 
-        var TMDBAPIService = function ( $rootScope, $http, $timeout, $resource, localStorageService, $location ) {
+        var TMDBAPIService = function ( $rootScope, $q, $http, $timeout, $resource, localStorageService, $location ) {
 
             var self = this;    
             var config = angular.module("config");
@@ -453,7 +453,7 @@ define( [ 'angular',
             };
         };
 
-        TMDBAPIService.$inject = [ '$rootScope', '$http', '$timeout', '$resource', 'localStorageService', '$location' ];
+        TMDBAPIService.$inject = [ '$rootScope', '$q', '$http', '$timeout', '$resource', 'localStorageService', '$location' ];
 
         return TMDBAPIService;
 }
